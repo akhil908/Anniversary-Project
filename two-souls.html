@@ -1,0 +1,193 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <!-- Meta & SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Happy Anniversary - A warm and lovely website filled with our story and memories.">
+  <meta name="keywords" content="Anniversary, Love, Memories, Couple, Two Souls One Story">
+  <title>Two Souls, One Story - Our Love Story</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    :root {
+      --gold: #b8860b;
+      --bg-light: #fffaf5;
+      --soft-gold: #f9e4b7;
+    }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--bg-light);
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--gold);
+    }
+    .hero {
+      height: 80vh;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.3), rgba(0,0,0,0.15)),
+                  url('images/1.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 1rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      max-width: 800px;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--gold);
+      text-align: center;
+    }
+
+    /* Memories Section */
+    .memories {
+      position: relative;
+      background: var(--soft-gold);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    /* Sparkle overlay */
+    .sparkles {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,0.8) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: sparkleMove 8s linear infinite;
+    }
+    @keyframes sparkleMove {
+      from { background-position: 0 0; }
+      to { background-position: 50px 50px; }
+    }
+    .memories p {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #555;
+      position: relative;
+      z-index: 1;
+    }
+    .memories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      position: relative;
+      z-index: 1;
+    }
+    .memories-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .memories-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    footer {
+      background: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">Two Souls, One Story ❤️</div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Happy Anniversary ❤️</h1>
+  </section>
+
+  <!-- Memories Section -->
+  <section class="memories">
+    <div class="sparkles"></div>
+    <h2>Our Sweet Memories</h2>
+    <p>Every picture is a page in our love story 💕. Here's a little gallery of moments that made us smile, laugh, and fall in love all over again.</p>
+    <div class="memories-grid">
+      <!-- Replace these with your own photos -->
+      <img src="images/2.jpg" alt="Memory 1">
+      <img src="images/3.jpg" alt="Memory 2">
+      <img src="images/4.jpg" alt="Memory 3">
+      <img src="images/5.jpg" alt="Memory 4">
+      <img src="images/6.jpg" alt="Memory 5">
+      <img src="images/7.jpg" alt="Memory 6">
+      <img src="images/8.jpg" alt="Memory 7">
+      <img src="images/9.jpg" alt="Memory 8">
+      <img src="images/10.jpg" alt="Memory 9">
+      <img src="images/11.jpg" alt="Memory 10">
+      <img src="images/12.jpg" alt="Memory 11">
+      <img src="images/13.jpg" alt="Memory 12">
+      <img src="images/14.jpg" alt="Memory 13">
+      <img src="images/15.jpg" alt="Memory 14">
+      <img src="images/16.jpg" alt="Memory 15">
+      <img src="images/17.jpg" alt="Memory 16">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Made with ❤️ for you — Akhi...
+  </footer>
+
+</body>
+</html>
