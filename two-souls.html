@@ -51,7 +51,7 @@
     }
     .hero {
       height: 80vh;
-      background: linear-gradient(to bottom right, rgba(0,0,0,0.3), rgba(0,0,0,0.15)),
+      background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.1)),
                   url('images/1.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
@@ -59,7 +59,7 @@
       text-align: center;
       color: white;
       padding: 1rem;
-    }
+          }
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
@@ -87,7 +87,6 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
       overflow: hidden;
     }
-    /* Sparkle overlay */
     .sparkles {
       position: absolute;
       top: 0; left: 0;
@@ -142,6 +141,35 @@
         font-size: 2rem;
       }
     }
+
+    /* Music Controls */
+    .music-controls {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      border: 2px solid var(--gold);
+      border-radius: 30px;
+      padding: 10px 20px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 2000;
+    }
+    .music-controls button {
+      background: var(--gold);
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    .music-controls button:hover {
+      background: #a97408;
+    }
   </style>
 </head>
 <body>
@@ -164,7 +192,6 @@
     <h2>Our Sweet Memories</h2>
     <p>Every picture is a page in our love story 💕. Here's a little gallery of moments that made us smile, laugh, and fall in love all over again.</p>
     <div class="memories-grid">
-      <!-- Replace these with your own photos -->
       <img src="images/2.jpg" alt="Memory 1">
       <img src="images/3.jpg" alt="Memory 2">
       <img src="images/4.jpg" alt="Memory 3">
@@ -181,6 +208,25 @@
       <img src="images/15.jpg" alt="Memory 14">
       <img src="images/16.jpg" alt="Memory 15">
       <img src="images/17.jpg" alt="Memory 16">
+      <img src="images/18.jpg" alt="Memory 17">
+      <img src="images/19.jpg" alt="Memory 18">
+      <img src="images/20.jpg" alt="Memory 19">
+      <img src="images/21.jpg" alt="Memory 20">
+      <img src="images/22.jpg" alt="Memory 21">
+      <img src="images/23.jpg" alt="Memory 22">
+      <img src="images/24.jpg" alt="Memory 23">
+      <img src="images/25.jpg" alt="Memory 24">
+      <img src="images/26.jpg" alt="Memory 25">
+      <img src="images/27.jpg" alt="Memory 26">
+      <img src="images/28.jpg" alt="Memory 27">
+      <img src="images/29.jpg" alt="Memory 28">
+      <img src="images/30.jpg" alt="Memory 29">
+      <img src="images/31.jpg" alt="Memory 30">
+      <img src="images/32.jpg" alt="Memory 31">
+      <img src="images/33.jpg" alt="Memory 32">
+      <img src="images/34.jpg" alt="Memory 33">
+      <img src="images/35.jpg" alt="Memory 34">
+      <img src="images/36.jpg" alt="Memory 35">
     </div>
   </section>
 
@@ -188,6 +234,53 @@
   <footer>
     Made with ❤️ for you — Akhi...
   </footer>
+
+  <!-- Music Player -->
+  <div class="music-controls">
+    <button id="playPause">Play</button>
+    <button id="next">Next ▶</button>
+  </div>
+
+  <audio id="bgMusic"></audio>
+
+  <script>
+    const songs = [
+      "music/song1.mp3",
+      "music/song2.mp3",
+      "music/song3.mp3"
+    ]; // Add your songs here
+
+    let currentSong = 0;
+    const audio = document.getElementById("bgMusic");
+    const playPauseBtn = document.getElementById("playPause");
+    const nextBtn = document.getElementById("next");
+
+    audio.src = songs[currentSong];
+    audio.loop = false;
+
+    playPauseBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = "Pause";
+      } else {
+        audio.pause();
+        playPauseBtn.textContent = "Play";
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentSong = (currentSong + 1) % songs.length;
+      audio.src = songs[currentSong];
+      audio.play();
+      playPauseBtn.textContent = "Pause";
+    });
+
+    audio.addEventListener("ended", () => {
+      currentSong = (currentSong + 1) % songs.length;
+      audio.src = songs[currentSong];
+      audio.play();
+    });
+  </script>
 
 </body>
 </html>
