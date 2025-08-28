@@ -1,4 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
@@ -7,72 +8,84 @@
 
 <style type="text/css">
 @font-face {
-	font-family: digit;
-	src: url('digital-7_mono.ttf') format("truetype");
+    font-family: digit;
+    src: url('digital-7_mono.ttf') format("truetype");
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
 }
 </style>
 
-<link href="css/default.css" type="text/css" rel="stylesheet">
+<link href="css/default.css?v=4" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/garden.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-
 </head>
 
 <body>
 
 <div id="mainDiv">
-	<div id="content">
-		<div id="code">
-			
-		    <span class="space"/><span class="comments">💕A letter from my heart💕</span><br />
-			<br>
-			Hey Baby !<br />
-			Do you know how much I love you🫶<br />
-			<span class="comments">// If love could be measured, yours for me would stretch beyond the stars⭐ </span><br />
-			Do you know how much you mean to me😊<br />
-			<span class="comments">// Even God can't measure how much you mean to me😘</span><br />
-			You are my safe place💌<br />
+    <div id="content">
+        <div id="code">
+            <span class="space"/><span class="comments">💕A letter from my heart💕</span><br />
+            <br>
+            Hey Baby !<br />
+            Do you know how much I love you🫶<br />
+            <span class="comments">// If love could be measured, yours for me would stretch beyond the stars⭐ </span><br />
+            Do you know how much you mean to me😊<br />
+            <span class="comments">// Even God can't measure how much you mean to me😘</span><br />
+            You are my safe place💌<br />
             You are my best friend🌟<br />
             You are my biggest cheerleader😍<br />
             You are my greatest Love💕<br />
-			<br>
-            I'm endlessly thankful for the way you love me;<br />
-            Today isn't just a celebration of the day we came together but <br />
-            it's a celebration of Us, our love, our journey, and everything we've grown through together;<br />
-            You've made my heart a home, <br />
+            <br>
+            I'm endlessly thankful for the way you love me❤️;<br />
+            Today isn't just a celebration of the day we came together but💕, <br />
+            it's a celebration of Us, our love, our journey, & everything we've grown through together❤️;<br />
+            You've made my heart a home🏠 <br />
             and I promise to keep loving you with the same care, respect, and passion for all the years to come😚<br />
             So here's to us—our memories, our laughter, and our future🔮<br />
+    
+            <br>
+            All I want to say is:<br />
+            Baby, I WILL LOVE YOU FOREVER💕;<br />
+        
+            <br>
+            Now If you want to hug me you can touch the heart below<br />
 
-			
-			<br>
-			<br>
-			All I want to say is:<br />
-			Baby, I will love you forever;<br />
-			<br>
-			<br>
-			Now If you want to hug me you can touch the heart below<br />
-			<br>
-			<span id="heartspan">
-			    <a href="two-souls.html">
-			        <i class="fas fa-heart" id="icon"></i>
-			    </a>
-			</span>
-		</div>
-		<div id="loveHeart">
-			<canvas id="garden"></canvas>
-			<div id="words">
-				<div id="messages">
-					Happy Anniversary My Love❤️
-					<div id="elapseClock"></div>
-				</div>
-				<div id="loveu">
-					I LOVE YOU <br/>
-					<div class="signature">- Akhi</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <span id="heartspan">
+                <a href="two-souls.html" id="heartLink">
+                    <i class="fas fa-heart" id="icon"></i>
+                </a>
+            </span>
+        </div>
+        <div id="loveHeart">
+            <canvas id="garden"></canvas>
+            <div id="words">
+                <div id="messages">
+                    Happy Anniversary My Love❤️
+                    <div id="elapseClock"></div>
+                </div>
+                <div id="loveu">
+                    I LOVE YOU❤️ <br/>
+                    <div class="signature">- Akhi</div>
+                </div>
+            </div>
+        </div>
+        <div id="clickSound">
+            <!-- Background music file (replace bg-music.mp3 with your actual file) -->
+            <audio id="initialMusic" autoplay loop muted>
+                <source src="bg-music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="heartMusic" loop>
+                <source src="heart-music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -86,26 +99,50 @@ together.setSeconds(0);
 together.setMilliseconds(0);
 
 if (!document.createElement('canvas').getContext) {
-	var msg = document.createElement("div");
-	msg.id = "errorMsg";
-	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-	document.body.appendChild(msg);
-	$("#code").css("display", "none")
-	$("#copyright").css("position", "absolute");
-	$("#copyright").css("bottom", "10px");
-	document.execCommand("stop");
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
 } else {
-	setTimeout(function () {
-		startHeartAnimation();
-	}, 5000);
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
 
-	timeElapse(together);
-	setInterval(function () {
-		timeElapse(together);
-	}, 500);
+    timeElapse(together);
+    setInterval(function () {
+        timeElapse(together);
+    }, 500);
 
-	adjustCodePosition();
-	$("#code").typewriter();
+    adjustCodePosition();
+    $("#code").typewriter();
+
+    var initialAudio = document.getElementById("initialMusic");
+    var heartAudio = document.getElementById("heartMusic");
+
+    // On first user click, unmute & play background music
+    document.body.addEventListener("click", function() {
+        if (initialAudio.muted) {
+            initialAudio.muted = false;
+            initialAudio.play().catch(e => console.log("Autoplay blocked:", e));
+        }
+    }, {once: true});
+
+    // Switch music when heart clicked
+    $("#heartLink").click(function(e) {
+        e.preventDefault();
+        initialAudio.pause();
+        heartAudio.play().catch(function(error) {
+            console.log("Heart audio playback failed: ", error);
+        });
+        // redirect after delay (optional)
+        setTimeout(() => {
+            window.location.href = "two-souls.html";
+        }, 500);
+    });
 }
 </script>
 </body>
